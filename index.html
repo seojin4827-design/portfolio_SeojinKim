@@ -370,6 +370,13 @@
   .collage img:hover{transform:translateY(-6px) rotate(0) scale(1.04);z-index:5;box-shadow:0 14px 30px rgba(20,40,70,.24)}
   .cfig figcaption{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:8px}
   .viz .share{margin-bottom:12px}
+  /* v9: clean grid collage (no overlap) */
+  .collage,.collage.two{display:grid;gap:8px;aspect-ratio:auto;max-width:none}
+  .collage img{position:static;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transform:none !important;border-radius:6px;box-shadow:0 1px 4px rgba(20,40,70,.10)}
+  .collage.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
+  .collage.three .c1{grid-row:1 / span 2;height:100%;aspect-ratio:auto;object-fit:cover;object-position:left top}
+  .collage.two{grid-template-columns:1fr 1fr}
+  .collage img:hover{transform:none !important;box-shadow:0 4px 14px rgba(20,40,70,.18);z-index:auto}
 
   /* ---------- Toast ---------- */
   .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);background:var(--toast-bg);color:var(--toast-fg);font-size:14px;padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s}
