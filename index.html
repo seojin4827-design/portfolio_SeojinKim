@@ -343,6 +343,15 @@
   .intro .kw span{font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px;background:#fff;border:1.5px solid var(--blue-700);color:var(--blue-700);box-shadow:0 2px 0 rgba(31,63,107,.18),0 3px 6px rgba(31,63,107,.08)}
   .intro .kw span.pink{background:#fde4ec;border-color:#e98aa8;color:#b24a6c;box-shadow:0 2px 0 rgba(178,74,108,.2),0 3px 6px rgba(178,74,108,.08)}
   .info{margin-top:18px}
+  /* v6: intro beside personal info */
+  .p-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;margin-top:18px}
+  .p-row .info{margin-top:0}
+  .p-row .intro{margin-top:0;max-width:none;padding:16px 18px;text-align:center}
+  .p-row .intro .kw{justify-content:center;margin-top:12px}
+  .p-row .intro .kw{gap:6px}
+  .p-row .intro .kw span{padding:3px 10px}
+  .p-row{gap:22px}
+  .p-row .intro{padding:16px 14px}
 
   /* ---------- Toast ---------- */
   .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);background:var(--toast-bg);color:var(--toast-fg);font-size:14px;padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s}
@@ -392,6 +401,7 @@
     .ins-eq{grid-template-columns:1fr}
     .op{height:18px}
     .intro p{font-size:13.5px}
+    .p-row{grid-template-columns:1fr;gap:16px}
   }
   @media (prefers-reduced-motion: reduce){section.panel{animation:none}.chev,details.item{transition:none}}
   @media print{
@@ -429,19 +439,21 @@
     <div>
       <div class="name-ko">김서진</div>
       <div class="name-en">Kim Seojin</div>
-      <div class="intro">
-        <p>시장과 소비자 데이터를 바탕으로 문제를 정의하고, 브랜드의 성장 기회와 실행 전략으로 연결합니다.</p>
-        <div class="kw"><span>소비자 리서치</span><span>데이터 분석</span><span>브랜드 전략 기획</span><span class="pink">코덕</span></div>
-      </div>
 
-      <dl class="info">
-        <dt>생년월일</dt><dd>2004.08.31</dd>
-        <dt>연락처</dt>
-        <dd><button class="copy" data-copy="010-4827-0305" title="클릭하면 복사됩니다">010-4827-0305<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></dd>
-        <dt>E-mail</dt>
-        <dd><button class="copy" data-copy="lwwoooowwl@gmail.com" title="클릭하면 복사됩니다">lwwoooowwl@gmail.com<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></dd>
-        <dt>주소</dt><dd>서울특별시 양천구 목동중앙로 11</dd>
-      </dl>
+      <div class="p-row">
+        <dl class="info">
+          <dt>생년월일</dt><dd>2004.08.31</dd>
+          <dt>연락처</dt>
+          <dd><button class="copy" data-copy="010-4827-0305" title="클릭하면 복사됩니다">010-4827-0305<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></dd>
+          <dt>E-mail</dt>
+          <dd><button class="copy" data-copy="lwwoooowwl@gmail.com" title="클릭하면 복사됩니다">lwwoooowwl@gmail.com<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></dd>
+          <dt>주소</dt><dd>서울특별시 양천구 목동중앙로 11</dd>
+        </dl>
+        <div class="intro">
+          <p>시장과 소비자 데이터를 바탕으로 문제를 정의하고, 브랜드의 성장 기회와 실행 전략으로 연결합니다.</p>
+          <div class="kw"><span>소비자 리서치</span><span>데이터 분석</span><span>브랜드 전략 기획</span><span class="pink">코덕</span></div>
+        </div>
+      </div>
 
       <div class="profile-grid">
         <div class="block">
